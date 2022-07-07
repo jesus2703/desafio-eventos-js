@@ -5,6 +5,8 @@ const infoProductos = [
     
   ];
 
+
+
   const info = document.getElementById("info");
   info.classList.add("row", "row-cols-1", "row-cols-md-3", "g-4");
 
@@ -12,13 +14,13 @@ const infoProductos = [
     const row = document.createElement("div");
     row.classList.add("col");
     row.innerHTML = `
-      <div class="card h-100">
+      <div class="card h-100" id="item">
         <img src="img/${corte.img}" class="card-img-top" id="cardimg" alt="...">
         <div class="card-body">
           <h5 class="card-title">${corte.name}</h5>
           <p class="card-text">Precio = $${corte.price} el Kilo</p>
           <p class="card-text">Stock = ${corte.stock}</p>
-          <a href="#" class="btn btn-primary">Comprar</a>
+          <a href="#" class="btn btn-primary" id="${corte.id}">Comprar</a>
         </div>
       </div>`;
   
@@ -27,16 +29,23 @@ const infoProductos = [
     
   });
 
+
+  info.addEventListener("click", e =>{
+    clickUsuario(e);
+  })
+
+  const clickUsuario = e => {
+    // console.log(e.target);
+    // console.log(e.target.classList.contains("btn"));
+    if (e.target.classList.contains("btn")) {
+  
+      console.log("usted realizo una compra");
+    }
+  }
+
   
 
-  // const clickUsuario = document.addEventListener("click", ()=>{
-  //   console.log(clickUsuario);
-  //  })
-
-  // const clickUsuario = document.getElementById("cardimg");
-  //   clickUsuario.addEventListener("click", ()=>{
-  //     console.log(infoProductos.name);
-  //   })
+  
 
    
   
