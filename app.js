@@ -26,22 +26,27 @@ const infoProductos = [
   
     info.appendChild(row);
 
-    
-  });
 
+  })
 
+      
   info.addEventListener("click", e =>{
     clickUsuario(e);
   })
 
   const clickUsuario = e => {
-    // console.log(e.target);
-    // console.log(e.target.classList.contains("btn"));
-    if (e.target.classList.contains("btn")) {
-  
+    
+    const boton = e.target.classList.contains("btn")
+    console.log(boton);
+    if(boton === true){
       console.log("usted realizo una compra");
     }
+    
   }
+
+
+
+  
 
   
 
