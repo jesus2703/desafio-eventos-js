@@ -5,6 +5,15 @@ const infoProductos = [
     
   ];
 
+  const input = document.querySelector("input");
+  input.addEventListener("input", () => {
+    console.log(input.value);
+  })
+
+  const boton = document.querySelector("#boton");
+  boton.addEventListener("click", () =>{
+    console.log("esta realizando una busqueda");
+  })
 
 
   const info = document.getElementById("info");
@@ -26,22 +35,18 @@ const infoProductos = [
   
     info.appendChild(row);
 
-
   })
 
-      
   info.addEventListener("click", e =>{
     clickUsuario(e);
   })
 
   const clickUsuario = e => {
-    
     const boton = e.target.classList.contains("btn")
     console.log(boton);
     if(boton === true){
       console.log("usted realizo una compra");
     }
-    
   }
 
 
