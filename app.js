@@ -13,16 +13,6 @@ const infoProductos = [
 
   let carrito = [];
 
-  // const input = document.querySelector("input");
-  // input.addEventListener("input", () => {
-  //   console.log(input.value);
-  // })
-
-  // const boton = document.querySelector("#boton");
-  // boton.addEventListener("click", () =>{
-  //   console.log("esta realizando una busqueda");
-  // })
-
 
   const info = document.getElementById("info");
   info.classList.add("row", "row-cols-sm-2", "row-cols-md-3", "g-4");
@@ -37,7 +27,7 @@ const infoProductos = [
           <h5 class="card-title">${corte.name}</h5>
           <p class="card-text">Precio = $${corte.price} el Kilo</p>
           <p class="card-text">Stock = ${corte.stock}</p>
-          <a href="#" class="btn btn-primary bg-danger" id="${corte.id}">Comprar</a>
+          <a href="#" class="btn btn-dark bg-danger" id="${corte.id}">Comprar</a>
         </div>
       </div>`;
   
@@ -55,12 +45,6 @@ const infoProductos = [
     const item = boton.classList.contains("btn");
       console.log(boton);
       
-      
-    
-    // console.log(boton);
-    // if(boton === true){
-    //   console.log("usted realizo una compra");
-    // }
   }
 
 
