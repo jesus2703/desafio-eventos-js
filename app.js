@@ -13,15 +13,15 @@ const infoProductos = [
 
   let carrito = [];
 
-  const input = document.querySelector("input");
-  input.addEventListener("input", () => {
-    console.log(input.value);
-  })
+  // const input = document.querySelector("input");
+  // input.addEventListener("input", () => {
+  //   console.log(input.value);
+  // })
 
-  const boton = document.querySelector("#boton");
-  boton.addEventListener("click", () =>{
-    console.log("esta realizando una busqueda");
-  })
+  // const boton = document.querySelector("#boton");
+  // boton.addEventListener("click", () =>{
+  //   console.log("esta realizando una busqueda");
+  // })
 
 
   const info = document.getElementById("info");
@@ -31,7 +31,7 @@ const infoProductos = [
     const row = document.createElement("div");
     row.classList.add("col");
     row.innerHTML = `
-      <div class="card h-100 m-2" id="item">
+      <div class="card h-100 my-3" id="item">
         <img src="img/${corte.img}" class="card-img-top" id="cardimg" alt="...">
         <div class="card-body bg-black text-bg-primary rounded">
           <h5 class="card-title">${corte.name}</h5>
